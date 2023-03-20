@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f0e5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.content-embed {
+  position: relative;
+  background: white;
+  border-radius: 37.5px;
+
+  width:120vw;
+  height: 1200px;
+  overflow: scroll;
+}
+
+.embed {
+  width:120vw;
+  height: 1200px;
+}
+
+canvas {
+}
+
+
+#about-skills-container {
+    padding: 3px 0px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+
+  z-index: 100;
+}
+
+#about-skill-container-0, #about-skill-container-1, #about-skill-container-2, #about-skill-container-3, #about-skill-container-4{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;;
+}
+#about-content-container span {
+    color: #574240;
+}
+
+
+#about-skills-render-container :nth-child(even), #about-others-render-container :nth-child(odd) {
+    background: #f5f0e5;
+}
+.about-skill-bar-container {
+    width: 100%;
+    height: 11px;
+    background: #f5f0e5 !important;
+    overflow: auto;
+}
+
+.about-skill-bar {
+    height: 100%;
+    background: linear-gradient(to right, #574240, #BFA5A4) !important;
+    width: 30%;
+}
+
+.about-skill-container span {
+    width: 250px;
+    background: transparent !important;
+}
+
+.about-skill-span {
+    color: #574240;
+    font-size: 1.1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.font-monospace {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+.Typewriter{
+  width: 2000px;
+  font-family: 'Anonymous Pro', monospace;
+  height: 1350px;
+  padding: 250px;
+  color: rgba(255,255,255,.75);
+  background-color: rgb(25,25,25);
+}
+
+.Typewriter__cursor{
+  padding: 30px;
+  position: relative;
+  top: -30px;
+  color: gray;
+  background-color: gray;
+}
+
+.about-me, .laptop{
+  height: 100vh;
+}
+
+.svg-container {
+  width: 67vw;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  margin-top: 80px;
+}
+@media only screen and (max-width: 1020px) {
+
+  .example{
+    width: 100vw;
+  }
+
+  .svg-container{
+    margin-top: 0;
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+
+.contact-me{
+  height:200px;
+}
+
+}
+
+
+.content {
+  width: 334px;
+  height: 216px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.wrapper {
+  padding: 10px;
+  width: 668px;
+  height: 432px;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
