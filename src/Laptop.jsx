@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Text, Html, ContactShadows, PresentationControls, Environment, useGLTF, OrbitControls, Float } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { MacbookPro } from './Model/Macbook_pro'
+import {OptimizedMacbook} from './Model/OptimizedMacbook'
 import { useAspect, Center } from '@react-three/drei'
 import TypeWriter from './TypeWriter'
 function Laptop() {
@@ -46,7 +47,7 @@ function Laptop() {
         />
       <Center>
         {/* <Float> */}
-        <MacbookPro
+        <OptimizedMacbook
           position={[0, 0, 0]}
           rotation={[0.34000000000000064, -0.05999999999999988, 0]}
           scale={10}
@@ -60,7 +61,7 @@ function Laptop() {
           // rotationKeyboard={rotationKeyboard}
           // rotationKeyboardZ={rotationKeyboardZ}
         >
-        </MacbookPro>
+        </OptimizedMacbook>
 
         <Html
           transform
