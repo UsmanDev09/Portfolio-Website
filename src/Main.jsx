@@ -16,7 +16,6 @@ return () => window.removeEventListener("load",handleLoading);
   }, [])
   return (
     <>
-    {loading ? <Spinner /> :
     <>
     <div className={` flex xl:flex-row lg:flex-row flex-col-reverse`} >
      <LandingPage />
@@ -30,7 +29,6 @@ return () => window.removeEventListener("load",handleLoading);
       <Contact />
     </div>
     </>
-}
     </>
     );
 }
