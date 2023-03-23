@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const TypeWriter = () => {
   return (
     <motion.div
-    className='bg-gray-800 relative left-0 top-0 right-0'
+    className='bg-gray-800 '
     initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{

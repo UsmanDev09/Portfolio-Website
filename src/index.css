@@ -14,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #f5f0e5;
+  /* overflow-x: hidden; */
 }
 
 code {
@@ -33,10 +34,15 @@ code {
   position: relative;
   background: white;
   border-radius: 37.5px;
+  width: 100%;
+  height: 100%;
 
-  width:120vw;
-  height: 1200px;
   overflow: scroll;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .embed {
@@ -104,10 +110,20 @@ canvas {
   font-family: 'Anonymous Pro', monospace;
 }
 
-.Typewriter{
+.htmlWrapper{
+  position: relative;
+  top:0;
+  left: 50px;
+  right: 0px;
   width: 2000px;
-  font-family: 'Anonymous Pro', monospace;
   height: 1350px;
+  overflow: hidden;
+}
+
+.Typewriter{
+  width: 100%;
+  height: 1350px;
+  font-family: 'Anonymous Pro', monospace;
   padding: 250px;
   color: rgba(255,255,255,.75);
   background-color: rgb(25,25,25);
@@ -121,26 +137,20 @@ canvas {
   background-color: gray;
 }
 
-.about-me, .laptop{
-  height: 100vh;
-}
-
-.svg-container {
-  width: 67vw;
-  height: 100vh;
-  position: relative;
-  left: 0;
-  margin-top: 80px;
-}
-@media only screen and (max-width: 1020px) {
+/* @media only screen and (max-width: 1020px) {
 
   .example{
     width: 100vw;
+    height: 70vh;
   }
 
   .svg-container{
     margin-top: 0;
     width: 100vw;
+  }
+
+  .about-me{
+    height: 67vw;
   }
 }
 
@@ -151,7 +161,7 @@ canvas {
 }
 
 }
-
+ */
 
 .content {
   width: 334px;

@@ -29,18 +29,13 @@ export default function Embed() {
   }, [])
 
   return (
-    <div
-      style={{
-        // background: 'radial-gradient(circle at top, #111459f2 , #2048a7)',
-      }}>
+
       <div
-        className="example"
         style={{
           border: 'none',
-          padding: '12px',
           stroke: '#574240',
         }}>
-        <motion.svg className="  svg-container"  viewBox={`${isSmallScreen ? '-35 0 600 650' : '0 -15 650 650'}`} xmlns="http://www.w3.org/2000/svg">
+        <motion.svg className="h-[700px]"  viewBox={`${isSmallScreen ? '-100 0 700 700' : '0 0 500 500'}`} xmlns="http://www.w3.org/2000/svg">
           <motion.image
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -244,7 +239,6 @@ export default function Embed() {
             /> */}
           </g>
         </motion.svg>
-      </div>
     </div>
   )
 }

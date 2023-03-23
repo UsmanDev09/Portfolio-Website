@@ -16,18 +16,20 @@ const Contact = () => {
   const formRef = useRef()
 
   return (
+    <div id="contact" className=' py-20'>
+    <p className={`${styles.sectionSubText} px-20`}> Get in touch</p>
+        <h3 className={`${styles.sectionHeadText} px-20`}>Contact. </h3>
     <div className='xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn('left', "tween", 0.2, 1)}
-        className="flex-[1] rounded-2xl"
+        className="xl:w-1/2 w-full  rounded-2xl"
       >
-        <p className={styles.sectionSubText}> Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact. </h3>
+
 
         <form
         ref={formRef}
         // onSubmit={handleSubmit}
-        className="mt-12 flex flex-col gap-8"
+        className="lg:mt-12 flex flex-col gap-8 px-20"
         >
           <label className="flex flex-col">
             <span className="text-[#574240] mb-4">
@@ -82,14 +84,15 @@ const Contact = () => {
 
         <motion.div
          variant={slideIn('right', 'tween', 0.2, 1)}
-         className="xl:flex-[0.7] xl:h-auto md:h-[350px] h-[550px]"
+         className="xl:w-1/2  w-full xl:h-[550px] h-[250px] justify-center"
          >
           <ContactMeCanvas />
          </motion.div>
 
     </div>
+    </div>
   )
 }
 
 
-export default StarWrapper(Contact, "contact");
+export default Contact;

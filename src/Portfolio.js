@@ -100,7 +100,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <>
+    <div className='px-20 py-6'>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>
           My Work
@@ -135,8 +135,8 @@ const Portfolio = () => {
           />
         })}
       </div>
-    </>
+    </div>
    );
 }
 
-export default StarWrapper(Portfolio);
+export default Portfolio;

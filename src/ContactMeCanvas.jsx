@@ -29,9 +29,7 @@ const ContactMeCanvas = () => {
       shadows
       frameLoop='demand'
       gl={{ preserveDrawingBuffer: true }}
-      camera={{
-        fov: isSmallScreen ? 45 : 60
-       }}
+
        receiveShadow
     >
       <Suspense  >
@@ -44,8 +42,8 @@ const ContactMeCanvas = () => {
         <ambientLight />
         <directionalLight position={[-5, 5, 5]} castShadow shadow-mapSize={1024} />
         <Float>
-        <OptimizedContactModel receiveShadow scale={10} rotation-x={0.2}/>
-        <ContactShadows position={[0,-1 , 0]} scale={20} blur={2} far={4.5} />
+        <OptimizedContactModel receiveShadow scale={isSmallScreen? 18: 14} rotation-x={0.5}/>
+        {/* <ContactShadows position={[0,-1 , 0]} scale={20} blur={2} far={4.5} /> */}
 
        </Float>
       </Suspense>
