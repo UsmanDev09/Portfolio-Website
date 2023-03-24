@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser'
 
 import ContactMeCanvas from './ContactMeCanvas';
 import { slideIn } from './helpers/motion';
-import StarWrapper from './SectionWrapper';
 import { styles } from './styles';
 
 const Contact = () => {
@@ -32,7 +31,7 @@ const Contact = () => {
         className="lg:mt-12 flex flex-col gap-8 px-20"
         >
           <label className="flex flex-col">
-            <span className="text-[#574240] mb-4">
+            <span className="text-secondary mb-4">
               Your Name
             </span>
             <input
@@ -41,12 +40,12 @@ const Contact = () => {
               value={form.name}
               // onChange={handleChange}
               placeholder="Usman"
-              className='bg-transparent border-[#574240] border-2 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium '
+              className='bg-transparent border-secondary border-2 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium '
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-[#574240] mb-4'>
+            <span className='text-secondary mb-4'>
             Your Email
             </span>
            <input
@@ -55,12 +54,12 @@ const Contact = () => {
               value={form.email}
               // onChange={handleChange}
               placeholder="usman.siddique@gmail.com"
-              className='bg-transparent border-[#574240] border-2 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium '
+              className='bg-transparent border-secondary border-2 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium '
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-[#574240] mb-4'>
+            <span className='text-secondary mb-4'>
             Your Message
             </span>
            <textarea
@@ -69,7 +68,7 @@ const Contact = () => {
               value={form.message}
               // onChange={handleChange}
               placeholder="What's your message?"
-              className='bg-transparent border-[#574240] border-2 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium '
+              className='bg-transparent border-secondary border-2 py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium '
             />
           </label>
           <button

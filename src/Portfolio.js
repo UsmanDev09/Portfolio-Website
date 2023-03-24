@@ -27,7 +27,7 @@ const ProjectCard = ({index, name, desciption, tags, image, source_code_link }) 
         <div></div>
 
         <div className="mt-5">
-          <h3 className="text-[#574240] font-bold mt-2 ">{name}</h3>
+          <h3 className="text-secondary font-bold mt-2 ">{name}</h3>
           <p classname="text-secondary mt-2 text-[14px]">{desciption}</p>
         </div>
 
@@ -36,7 +36,7 @@ const ProjectCard = ({index, name, desciption, tags, image, source_code_link }) 
             return (
               <p
                 key={tag.name}
-                className={`text-[14px] ${tag.color} border-[#574240]   text-[#574240]  text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-${tag.color}`}>
+                className={`text-[14px] ${tag.color} border-secondary   text-secondary  text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-${tag.color}`}>
                 {tag.name}
               </p>
             )

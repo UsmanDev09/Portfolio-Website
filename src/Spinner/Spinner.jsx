@@ -13,10 +13,10 @@ function Spinner() {
         top: '40%',
         left: '45%',
         width: '100px',
-        color: '#f5f0e5'
+        color: '#00C8A1'
       }}
-      color='#f5f0e5'
-      backgroundColor='white'
+      color='#00C8A1'
+      backgroundColor='#00C8A1'
     />
   );
 }

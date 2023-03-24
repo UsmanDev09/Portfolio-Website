@@ -33,7 +33,7 @@ export default function Embed() {
       <div
         style={{
           border: 'none',
-          stroke: '#574240',
+          stroke: 'var(--secondary-color)',
         }}>
         <motion.svg className="h-[700px]"  viewBox={`${isSmallScreen ? '-100 0 700 700' : '0 0 500 500'}`} xmlns="http://www.w3.org/2000/svg">
           <motion.image
@@ -56,8 +56,8 @@ export default function Embed() {
               }}
               transform="translate(170 118)"
               font-weight="bold"
-              fill="#574240"
-              style={{ stroke: '#574240', strokeWidth: '0.5px' }}>
+              fill='var(--secondary-color)'
+              style={{ stroke: 'var(--secondary-color)', strokeWidth: '0.5px' }}>
               <text x="0" y="0" fontSize="12" className="about-header-upper-text" style={{ opacity: 1 }}>
                 Name :
               </text>
@@ -142,7 +142,7 @@ export default function Embed() {
                 ease: 'easeInOut',
                 repeat: 0,
               }}
-              x="71" y="25" class="about-header" fill="#574240" font-size="18" font-weight="bold" style={{ stroke: '#574240', strokeWidth: '1px' }}>
+              x="71" y="25" class="about-header" fill='var(--secondary-color)' font-size="18" font-weight="bold" style={{ stroke: 'var(--secondary-color)', strokeWidth: '1px' }}>
               SKILLS
             </motion.text>
             <motion.foreignObject initial={{ opacity: 0 }}
@@ -153,50 +153,50 @@ export default function Embed() {
                 repeat: 0,
               }}
               x="0" y="60" width="506" height="340">
-              <div id="about-skills-container" class="about-container">
+              <div id="about-skills-container" className="about-container">
                 <div id="about-skills-render-container">
-                  <div id="about-skill-container-0" class="row about-skill-container" style={{ opacity: 1 }}>
-                    <span id="about-skill-span-0" class="about-skill-span">
+                  <div id="about-skill-container-0" className="row about-skill-container" style={{ opacity: 1 }}>
+                    <span id="about-skill-span-0" className="about-skill-span">
                       React Js
                     </span>
-                    <div class="about-skill-bar-container">
-                      <div id="about-skill-bar-0" class="about-skill-bar" style={{ width: '80%' }}></div>
+                    <div class="about-skill-bar-container w-full h-[11px]">
+                      <div id="about-skill-bar-0" className="about-skill-bar" style={{ width: '80%' }}></div>
                     </div>
                   </div>
 
-                  <div id="about-skill-container-1" class="row about-skill-container" style={{ opacity: 1 }}>
-                    <span id="about-skill-span-1" class="about-skill-span">
+                  <div id="about-skill-container-1" className="row about-skill-container" style={{ opacity: 1 }}>
+                    <span id="about-skill-span-1" className="about-skill-span">
                       Node Js
                     </span>
-                    <div class="about-skill-bar-container">
-                      <div id="about-skill-bar-1" class="about-skill-bar" style={{ width: '60%' }}></div>
+                    <div className="about-skill-bar-container w-full h-[11px]">
+                      <div id="about-skill-bar-1" className="about-skill-bar" style={{ width: '60%' }}></div>
                     </div>
                   </div>
 
-                  <div id="about-skill-container-2" class="row about-skill-container" style={{ opacity: 1 }}>
-                    <span id="about-skill-span-2" class="about-skill-span">
+                  <div id="about-skill-container-2" className="row about-skill-container" style={{ opacity: 1 }}>
+                    <span id="about-skill-span-2" className="about-skill-span">
                       JavaScript
                     </span>
-                    <div class="about-skill-bar-container">
-                      <div id="about-skill-bar-2" class="about-skill-bar" style={{ width: '55%' }}></div>
+                    <div className="about-skill-bar-container w-full h-[11px]">
+                      <div id="about-skill-bar-2" className="about-skill-bar" style={{ width: '55%' }}></div>
                     </div>
                   </div>
 
-                  <div id="about-skill-container-3" class="row about-skill-container" style={{ opacity: 1 }}>
-                    <span id="about-skill-span-3" class="about-skill-span">
+                  <div id="about-skill-container-3" className="row about-skill-container" style={{ opacity: 1 }}>
+                    <span id="about-skill-span-3" className="about-skill-span">
                       HTML + CSS
                     </span>
-                    <div class="about-skill-bar-container">
-                      <div id="about-skill-bar-3" class="about-skill-bar" style={{ width: '80%' }}></div>
+                    <div className="about-skill-bar-container w-full h-[11px]">
+                      <div id="about-skill-bar-3" className="about-skill-bar" style={{ width: '80%' }}></div>
                     </div>
                   </div>
 
-                  <div id="about-skill-container-4" class="row about-skill-container" style={{ opacity: 1 }}>
-                    <span id="about-skill-span-4" class="about-skill-span">
+                  <div id="about-skill-container-4" className="row about-skill-container" style={{ opacity: 1 }}>
+                    <span id="about-skill-span-4" className="about-skill-span">
                       React Three Fiber
                     </span>
-                    <div class="about-skill-bar-container">
-                      <div id="about-skill-bar-4" class="about-skill-bar" style={{ width: '40%' }}></div>
+                    <div className="about-skill-bar-container w-full h-[11px]">
+                      <div id="about-skill-bar-4" className="about-skill-bar" style={{ width: '40%' }}></div>
                     </div>
                   </div>
                 </div>

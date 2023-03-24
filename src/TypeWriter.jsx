@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const TypeWriter = () => {
   return (
     <motion.div
-    className='bg-gray-800 '
+    className='bg-transparent '
     initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
@@ -18,7 +18,7 @@ const TypeWriter = () => {
           typewriter
             .pauseFor(2500)
             .typeString(
-              '<span style="font-size: 150px; color: rgba(255,255,255,.75);">HI. I AM USMAN, <span style="color:#574240 ; text-shadow: -1px 3px 2px #574240; font-weight: bold; font-size:150px;" >WEB DEVELOPER </span> FROM PAKISTAN.</span> ',
+              '<span style="font-size: 150px; color: rgba(255,255,255,.75);">HI. I AM USMAN, <span style="color:var(--secondary-color) ; text-shadow: -1px 3px 2px var(--secondary-color); font-weight: bold; font-size:150px;" >WEB DEVELOPER </span> FROM PAKISTAN.</span> ',
             )
             .changeDelay(500)
             .callFunction(() => {

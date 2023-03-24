@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+--primay-color: #0D0948;
+--secondary-color:#00C8A1;
+
+--gradient: linear-gradient(to right top, #00c8a1, #53c991, #78ca84, #95ca7a, #afc975);
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -13,7 +20,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f5f0e5;
+  background: var(--primay-color);
   /* overflow-x: hidden; */
 }
 
@@ -76,18 +83,17 @@ canvas {
 
 
 #about-skills-render-container :nth-child(even), #about-others-render-container :nth-child(odd) {
-    background: #f5f0e5;
-}
+};
+
 .about-skill-bar-container {
     width: 100%;
     height: 11px;
-    background: #f5f0e5 !important;
     overflow: auto;
 }
 
 .about-skill-bar {
     height: 100%;
-    background: linear-gradient(to right, #574240, #BFA5A4) !important;
+    background:linear-gradient(to right top, #00c8a1, #53c991, #78ca84, #95ca7a, #b1c093) !important;
     width: 30%;
 }
 
@@ -97,7 +103,7 @@ canvas {
 }
 
 .about-skill-span {
-    color: #574240;
+    color: var(--secondary-color);
     font-size: 1.1rem;
 }
 
@@ -115,8 +121,8 @@ canvas {
   top:0;
   left: 50px;
   right: 0px;
-  width: 2000px;
-  height: 1350px;
+  width: 2050px;
+  height: 1800px;
   overflow: hidden;
 }
 
@@ -126,7 +132,6 @@ canvas {
   font-family: 'Anonymous Pro', monospace;
   padding: 250px;
   color: rgba(255,255,255,.75);
-  background-color: rgb(25,25,25);
 }
 
 .Typewriter__cursor{

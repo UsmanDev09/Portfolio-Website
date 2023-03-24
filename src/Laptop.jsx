@@ -3,6 +3,7 @@ import { Center, Float, Html, ContactShadows } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 import { OptimizedMacbook } from './Model/OptimizedMacbook'
+import {Model} from './Model';
 import TypeWriter from './TypeWriter'
 
 function Laptop() {
@@ -26,7 +27,7 @@ function Laptop() {
 
   return (
     <>
-      <color args={['#f5f0e5']} attach="background" />
+      <color args={['#0D0948']} attach="background" />
 
       {/* <OrbitControls makeDefault /> */}
       <pointLight castShadow position={[10, 10, 10]} intensity={1.5} />
@@ -34,9 +35,9 @@ function Laptop() {
       <group position={[0,0,0]} rotation={[0,0,0]}>
         <Center>
           {/* <Float> */}
-          <OptimizedMacbook position={[1, 0, 0]} rotation={[0.34000000000000064, -0.05999999999999988, 0]} scale={10} castShadow></OptimizedMacbook>
+          <Model position={[1, 0, 0]} rotation={[0.34000000000000064, -0.05999999999999988, 0]} scale={1} castShadow></Model>
 
-          <Html transform distanceFactor={1} className="htmlWrapper" position={[1, 1.85, -5]} rotation={[-0.010000000000000205, -0.08999999999999997, -0.03]}>
+          <Html transform distanceFactor={1} className="htmlWrapper" position={[1, 2, -5]} rotation={[-0.011000000000000205, -0.09399999999999997, -0.03]}>
             <TypeWriter />
           </Html>
           {/* </Float> */}
