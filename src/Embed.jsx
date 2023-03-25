@@ -11,19 +11,29 @@ const navigation = [
 export default function Embed() {
 
   const [isSmallScreen, setIsSmallScreen] = useState()
+  const [isExtraSmallScreen, setIsExtraSmallScreen] = useState()
+
 
   useEffect(() => {
-      const mediaQuery = window.matchMedia('(max-width: 1020px')
+      const mediaQuerySmallScreen = window.matchMedia('(max-width: 1020px')
+      const mediaQueryExtraSmallScreen = window.matchMedia('(min-width: 400px) and (max-width: 700px)')
 
-      setIsSmallScreen(mediaQuery.matches)
+      setIsSmallScreen(mediaQuerySmallScreen.matches)
+      setIsExtraSmallScreen(mediaQueryExtraSmallScreen.matches)
+
       const handleMediaQueryChange = (event) => {
         setIsSmallScreen(event.matches)
       }
+      const handleExtraSmallMediaQueryChange = (event) => {
+        setIsExtraSmallScreen(event.matches)
+      }
 
-      mediaQuery.addEventListener('change', handleMediaQueryChange)
-
+      mediaQuerySmallScreen.addEventListener('change', handleMediaQueryChange)
+      mediaQueryExtraSmallScreen.addEventListener('change', handleExtraSmallMediaQueryChange)
+      console.log(isExtraSmallScreen, isSmallScreen)
       return () => {
-        mediaQuery.removeEventListener('change', handleMediaQueryChange)
+        mediaQuerySmallScreen.removeEventListener('change', handleMediaQueryChange)
+        mediaQueryExtraSmallScreen.removeEventListener('change', handleExtraSmallMediaQueryChange)
       }
 
   }, [])
@@ -31,11 +41,12 @@ export default function Embed() {
   return (
 
       <div
+
         style={{
           border: 'none',
           stroke: 'var(--secondary-color)',
         }}>
-        <motion.svg className="h-[700px]"  viewBox={`${isSmallScreen ? '-100 0 700 700' : '0 0 500 500'}`} xmlns="http://www.w3.org/2000/svg">
+        <motion.svg className={`${isExtraSmallScreen ? 'h-[500px]' : isSmallScreen ? 'h-[600px]' : 'h-[700px]'}`}  viewBox={`${isSmallScreen ? '-100 0 700 700' : '0 0 500 500'}`} xmlns="http://www.w3.org/2000/svg">
           <motion.image
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
