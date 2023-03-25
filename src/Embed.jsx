@@ -16,7 +16,7 @@ export default function Embed() {
 
   useEffect(() => {
       const mediaQuerySmallScreen = window.matchMedia('(max-width: 1020px')
-      const mediaQueryExtraSmallScreen = window.matchMedia('(min-width: 400px) and (max-width: 700px)')
+      const mediaQueryExtraSmallScreen = window.matchMedia('(min-width: 300px) and (max-width: 700px)')
 
       setIsSmallScreen(mediaQuerySmallScreen.matches)
       setIsExtraSmallScreen(mediaQueryExtraSmallScreen.matches)
@@ -46,7 +46,7 @@ export default function Embed() {
           border: 'none',
           stroke: 'var(--secondary-color)',
         }}>
-        <motion.svg className={`${isExtraSmallScreen ? 'h-[500px]' : isSmallScreen ? 'h-[600px]' : 'h-[700px]'}`}  viewBox={`${isSmallScreen ? '-100 0 700 700' : '0 0 500 500'}`} xmlns="http://www.w3.org/2000/svg">
+        <motion.svg className={`${isExtraSmallScreen ? 'h-[500px] w-[400px]' : isSmallScreen ? 'h-[600px]' : 'h-[700px]'}`}  viewBox={`${isSmallScreen ? '-100 0 700 700' : '0 0 500 500'}`} xmlns="http://www.w3.org/2000/svg">
           <motion.image
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
