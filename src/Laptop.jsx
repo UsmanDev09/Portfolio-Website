@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Center, Float, Html, ContactShadows } from '@react-three/drei'
+import { Center, Float, Html, ContactShadows, OrbitControls, PresentationControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-
+import { motion } from 'framer-motion'
 import { OptimizedMacbook } from './Model/OptimizedMacbook'
 import {Model} from './Model';
 import TypeWriter from './TypeWriter'
@@ -29,27 +29,32 @@ function Laptop() {
     <>
       <color args={['#0D0948']} attach="background" />
 
-      {/* <OrbitControls makeDefault /> */}
       <pointLight castShadow position={[10, 10, 10]} intensity={1.5} />
-
+      <PresentationControls
+            global
+            rotation={ [ 0, 0, 0 ] }
+            polar={ [ - 0.4, 0.2 ] }
+            azimuth={ [ - 1, 0.75 ] }
+            config={ { mass: 2, tension: 400 } }
+            snap={ { mass: 4, tension: 400 } }
+        >
       <group position={[0,0,0]} rotation={[0,0,0]}>
         <Center>
-          {/* <Float> */}
-          <Model position={[1, 0, 0]} rotation={[0.34000000000000064, -0.05999999999999988, 0]} scale={1} castShadow></Model>
+          <Float rotationIntensity={0.4}>
+          <Model position={[1, 0, 0]} rotation={[0.34000000000000064, -0.39999999999999988, 0]} scale={1} castShadow></Model>
+          </Float>
 
-          <Html transform distanceFactor={1} className="htmlWrapper" position={[1, 2, -5]} rotation={[-0.011000000000000205, -0.09399999999999997, -0.03]}>
-            <TypeWriter />
-          </Html>
-          {/* </Float> */}
-          <ContactShadows position={[1, -1, 0]} scale={4} blur={3} far={2.5} />
+          <ContactShadows position={[1, -1, 0]} scale={5} blur={3} far={3.5} />
         </Center>
       </group>
+      </PresentationControls>
     </>
   )
 }
 
 export default function Portfolio() {
   return (
+
     <Canvas>
       <Laptop />
     </Canvas>

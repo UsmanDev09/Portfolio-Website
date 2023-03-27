@@ -119,12 +119,15 @@ canvas {
 .htmlWrapper{
   position: relative;
   top:0;
-  left: 50px;
+  left: 60px;
   right: 0px;
-  width: 2050px;
-  height: 1800px;
+  width: 2070px;
+  height: 1970px;
   overflow: hidden;
+  border-radius: 50px;
 }
+
+
 
 .Typewriter{
   width: 100%;
@@ -168,7 +171,7 @@ canvas {
 }
  */
 
-.content {
+/* .content {
   width: 334px;
   height: 216px;
   background: #f0f0f0;
@@ -183,4 +186,4 @@ canvas {
   height: 432px;
   transform: scale(0.5);
   transform-origin: top left;
-}
+} */

@@ -58,7 +58,7 @@ export default function Embed() {
             href="bitmoji1.png" opacity="1" height="170" width="145" x="2" mask="url(#about-profil-picture-mask)" image-rendering="optimizeSpeed"></motion.image>
           <g >
             <motion.g
-            initial={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
                 duration: 2,

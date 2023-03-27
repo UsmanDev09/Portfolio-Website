@@ -1,12 +1,29 @@
 import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
-import StarWrapper from './SectionWrapper';
+
 import { fadeIn, textVariant } from './helpers/motion';
 import { styles } from './styles';
+import { projects } from './Projects/projects';
 
 const ProjectCard = ({index, name, desciption, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div
+      initial={{
+        x: '-100%',
+        y: 0,
+      }}
+      whileInView={{
+        x: 0,
+        y: 0,
+      }}
+      viewport={{ once: false }}
+      transition={{
+        type: 'spring',
+        delay: 0,
+        duration: 1,
+        ease: 'easeOut',
+      }}
+    >
       <Tilt
         options={{
           max: 45,
@@ -15,7 +32,7 @@ const ProjectCard = ({index, name, desciption, tags, image, source_code_link }) 
         }}
         className="p-4 rounded-2xl sm:w-[360px] w-full shadow-lg">
         <div className="relative w-full h-[230px]">
-          <a href={source_code_link} target='_blank'>
+          <a href={source_code_link} target="_blank">
             <img src={image} alt={name} className="w-full h-full object-fit rounded-2xl" />
             <div className="absolute inset-0 flex-justify-end m-3 card-img-hover">
               <div className="black-graident w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
@@ -47,67 +64,27 @@ const ProjectCard = ({index, name, desciption, tags, image, source_code_link }) 
   )
 }
 
-const projects = [
-  {
-    name: 'Marble Race Game',
-    description: 'Web-based game build with react-three fiber.',
-    tags: [
-      {
-        name: 'reactjs',
-      },
-      {
-        name: 'r3f',
-      },
-    ],
-    image: 'marblerace.png',
-    source_code_link: 'https://marble-race-orpin.vercel.app/',
-  },
-  {
-    name: 'Ecommerce Marketplace',
-    description: 'Web-based platform that allows users to publish products and sell them to their customer base.',
-    tags: [
-      {
-        name: 'nextjs',
-      },
-      {
-        name: 'tailwind',
-      },
-    ],
-    image: 'ecommerce.png',
-    source_code_link: 'https://next-js-ecommerce-marketplace-rhwb.vercel.app/',
-  },
-  {
-    name: 'Portfolio Website',
-    description: 'This is my portfolio website.',
-    tags: [
-      {
-        name: 'reactjs',
-      },
-      {
-        name: 'framer-motion',
-      },
-      {
-        name: 'tailwind',
-      },
-      {
-        name: 'r3f',
-      },
-    ],
-    image: 'portfolio.png',
-    source_code_link: 'https://portfolio-website-wheat-nu.vercel.app/',
-  },
-]
 
 const Portfolio = () => {
   return (
-    <div className='px-20 py-6'>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>
-          My Work
-        </p>
-        <h2 className={`${styles.sectionHeadText}`}>
-          Projects.
-        </h2>
+    <div className="px-20 py-6">
+      <motion.div
+        initial={{
+          opacity: 0
+        }}
+        whileInView={{
+          opacity: 1
+        }}
+        viewport={{ once: false }}
+        transition={{
+          type: 'spring',
+          delay: 0,
+          duration: 1,
+          ease: 'easeOut',
+        }}
+      >
+        <p className={`${styles.sectionSubText}`}>My Work</p>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className="w-full flex work" id="work">
@@ -125,18 +102,13 @@ const Portfolio = () => {
         </motion.p> */}
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-10 m-auto'>
+      <div className="mt-20 flex flex-wrap gap-10 m-auto">
         {projects.map((project, index) => {
-          {console.log(project)}
-          return <ProjectCard
-            key={index}
-            index={index}
-            {...project}
-          />
+          return <ProjectCard key={index} index={index} {...project} />
         })}
       </div>
     </div>
-   );
+  )
 }
 
 export default Portfolio;

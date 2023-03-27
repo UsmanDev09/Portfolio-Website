@@ -16,11 +16,11 @@ const TypeWriter = () => {
       <Typewriter
         onInit={(typewriter) => {
           typewriter
-            .pauseFor(2500)
+            .pauseFor(1500)
             .typeString(
               '<span style="font-size: 150px; color: rgba(255,255,255,.75);">HI. I AM USMAN, <span style="color:var(--secondary-color) ; text-shadow: -1px 3px 2px var(--secondary-color); font-weight: bold; font-size:150px;" >WEB DEVELOPER </span> FROM PAKISTAN.</span> ',
             )
-            .changeDelay(500)
+            .changeDelay(200)
             .callFunction(() => {
             })
             .callFunction(() => {
