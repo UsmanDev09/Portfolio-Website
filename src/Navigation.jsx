@@ -115,12 +115,7 @@ const Navigation = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 100 }}
-              transition={{
-                duration: 200,
-                repeat: Infinity,
-                repeatType: "loop",
-                repeatDelay: 2
-              }}
+
               className={`font-monspace  ml-2 ${navBg ? 'text-black' : 'text-secondary'}`}
             >
               USMAN.
@@ -163,21 +158,18 @@ const Navigation = () => {
             </svg>
           </motion.button>
         </div>
-        <AnimatePresence>
-        <motion.div
+        <div
           animate={openMenu ? "open" : "closed"}
           variants={variants}
 
-          className={`items-center rounded-xl mt-10 justify-between ${openMenu ? 'block bg-white' : 'blvk'} w-full md:flex md:w-auto md:order-1 lg:bg-transparent`}
+          className={`items-center rounded-xl mt-10 justify-between ${openMenu && ' bg-white'} w-full md:flex md:w-auto md:order-1 lg:bg-transparent`}
           id="navbar-sticky">
           <ul class="flex flex-col p-4 mt-4  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <motion.li>
               <motion.a
               initial={{ opacity: 0 }}
               animate={{ opacity: 100 }}
-              transition={{
-                duration: 1,
-              }}
+
                 href="#about"
                 className={`font-monospace block py-2 pl-3 pr-4  md:hover:text-black rounded md:bg-transparent md:p-0 dark:text-white ${navBg ? 'text-black' : 'text-secondary' }`}
                 aria-current="page">
@@ -188,9 +180,7 @@ const Navigation = () => {
               <motion.a
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 100 }}
-                transition={{
-                  duration: 1,
-                }}
+
                 href="#work"
                 className={`font-monospace block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${navBg ? 'text-black' : 'text-secondary' }`}>
                 Work
@@ -200,17 +190,14 @@ const Navigation = () => {
               <motion.a
                 initial={{ opacity: 0 }}
                   animate={{ opacity: 100 }}
-                  transition={{
-                    duration: 1,
-                }}
+
                 href="#contact"
                 className={`font-monospace block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${navBg ? 'text-black' : 'text-secondary' }`}>
                 Contact
               </motion.a>
             </li>
           </ul>
-        </motion.div>
-        </AnimatePresence>
+        </div>
       </div>
     </nav>
   )
