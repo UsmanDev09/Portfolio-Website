@@ -68,9 +68,9 @@ const Navigation = () => {
                                                     data-palette-color="#00c8a1">
                                                   <motion.path
                                                     d="M17.95 6.7L17.95 6.7Q13.1 6.7 9.98 5.68 6.85 4.65 5.1 2.95 3.35 1.25 2.68-0.95 2-3.15 2-5.5L2-5.5 2-28.75Q2-29.4 2.18-29.85 2.35-30.3 2.7-30.6L2.7-30.6 9.15-36.05Q9.4-36.25 9.83-36.38 10.25-36.5 10.75-36.5L10.75-36.5 18.6-36.5Q19.8-36.5 20.35-35.95 20.9-35.4 20.9-34.2L20.9-34.2 20.9-11.4Q20.9-10.95 21.05-10.58 21.2-10.2 21.7-10L21.7-10 21.7-28.75Q21.7-29.4 21.85-29.85 22-30.3 22.3-30.55L22.3-30.55 22.35-30.6 28.85-36.05Q29.1-36.25 29.5-36.38 29.9-36.5 30.45-36.5L30.45-36.5 38.05-36.5Q39.25-36.5 39.8-35.95 40.35-35.4 40.35-34.2L40.35-34.2 40.35-9.45Q40.35-7.15 39.7-5.2 39.05-3.25 37.35-1.85L37.35-1.85 30.85 3.55Q29.1 5.05 26 5.88 22.9 6.7 17.95 6.7ZM39.85-9.45L39.85-9.45 39.85-34.2Q39.85-35.15 39.43-35.58 39-36 38.05-36L38.05-36 30.45-36Q29.5-36 29.08-35.58 28.65-35.15 28.65-34.2L28.65-34.2 28.65-11.4Q28.65-10.4 27.9-9.73 27.15-9.05 24.5-9.05L24.5-9.05Q21.9-9.05 21.15-9.73 20.4-10.4 20.4-11.4L20.4-11.4 20.4-34.2Q20.4-35.15 19.98-35.58 19.55-36 18.6-36L18.6-36 10.75-36Q9.8-36 9.38-35.58 8.95-35.15 8.95-34.2L8.95-34.2 8.95-9.45Q8.95-7.15 9.63-5.28 10.3-3.4 12.03-2.08 13.75-0.75 16.75 0 19.75 0.75 24.4 0.75L24.4 0.75Q29.05 0.75 32.05 0 35.05-0.75 36.77-2.08 38.5-3.4 39.18-5.28 39.85-7.15 39.85-9.45ZM14.45-10.65L14.45-31.5 14.95-31.5 14.95-10.65Q14.95-7.85 16.93-6.13 18.9-4.4 24.45-4.4L24.45-4.4Q30-4.4 32-6.13 34-7.85 34-10.65L34-10.65 34-31.5 34.5-31.5 34.5-10.65Q34.5-7.65 32.4-5.78 30.3-3.9 24.45-3.9L24.45-3.9Q18.6-3.9 16.53-5.78 14.45-7.65 14.45-10.65L14.45-10.65Z"
-                                                    stroke={`${navBg ? '#000' : '#00c8a1'}`}
+                                                    stroke='#00c8a1'
                                                     strokeWidth={2}
-                                                    fill={`${navBg ? '#000' : 'transparent'}`}
+                                                    fill='transparent'
                                                     initial={{ pathLength: 0 }}
                                                     animate={{ pathLength: 1 }}
                                                     strokeDasharray="0 1"
@@ -116,7 +116,7 @@ const Navigation = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 100 }}
 
-              className={`font-monspace  ml-2 ${navBg ? 'text-black' : 'text-secondary'}`}
+              className={`font-monspace  ml-2 text-secondary`}
             >
               USMAN.
             </motion.p>
@@ -158,20 +158,20 @@ const Navigation = () => {
             </svg>
           </motion.button>
         </div>
+        {/* Animate mobile navbar */}
         <div
           animate={openMenu ? "open" : "closed"}
           variants={variants}
 
-          className={`items-center rounded-xl mt-10 justify-between ${openMenu && ' bg-white'} w-full md:flex md:w-auto md:order-1 lg:bg-transparent`}
+          className={`items-center rounded-xl mt-10 justify-between  ${openMenu ? 'block bg-white' : 'hidden'} w-full md:flex md:w-auto md:order-1 lg:bg-transparent`}
           id="navbar-sticky">
           <ul class="flex flex-col p-4 mt-4  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <motion.li>
               <motion.a
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 100 }}
-
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 100 }}
                 href="#about"
-                className={`font-monospace block py-2 pl-3 pr-4  md:hover:text-black rounded md:bg-transparent md:p-0 dark:text-white ${navBg ? 'text-black' : 'text-secondary' }`}
+                className={`font-monospace block py-2 pl-3 pr-4  md:hover:text-black rounded md:bg-transparent md:p-0 text-secondary dark:text-white`}
                 aria-current="page">
                 About
               </motion.a>
@@ -182,7 +182,7 @@ const Navigation = () => {
                 animate={{ opacity: 100 }}
 
                 href="#work"
-                className={`font-monospace block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${navBg ? 'text-black' : 'text-secondary' }`}>
+                className={`font-monospace block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent text-secondary md:hover:text-black md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}>
                 Work
               </motion.a>
             </li>
@@ -192,7 +192,7 @@ const Navigation = () => {
                   animate={{ opacity: 100 }}
 
                 href="#contact"
-                className={`font-monospace block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${navBg ? 'text-black' : 'text-secondary' }`}>
+                className={`font-monospace block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent text-secondary md:hover:text-black md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 `}>
                 Contact
               </motion.a>
             </li>
